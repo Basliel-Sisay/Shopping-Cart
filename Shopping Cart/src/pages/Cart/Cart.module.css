@@ -1,0 +1,101 @@
+.cartPage{
+  display: grid;
+  grid-template-columns: 1fr minmax(280px, 340px);
+  grid-template-areas:
+    "title title"
+    "items summary";
+  gap: var(--space-lg) var(--space-2xl);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-2xl) var(--space-xl);
+  align-items: start;
+  flex: 1;
+  width: 100%;
+}
+.pageTitle{
+  grid-area: title;
+  font-size: var(--font-size-3xl);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--color-border);
+}
+.cartItems{
+  grid-area: items;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+.orderSummary{
+  grid-area: summary;
+  position: sticky;
+  top: calc(var(--nav-height) + var(--space-lg));
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  padding: var(--space-xl);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+}
+.summaryTitle{
+  font-size: var(--font-size-lg);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--color-border);
+}
+.grandTotal{
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  padding: var(--space-md);
+  background: var(--color-success-light);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  text-align: center;
+}
+.emptyCart{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: var(--space-lg);
+  min-height: calc(100vh - var(--nav-height));
+  padding: var(--space-3xl) var(--space-xl);
+}
+.emptyTitle{
+  font-size: var(--font-size-3xl);
+  color: var(--color-text-primary);
+}
+.shopLink{
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-md) var(--space-2xl);
+  font-weight: 600;
+  color: #ffffff;
+  background: var(--color-primary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  text-decoration: none;
+  transition: var(--transition);
+}
+.shopLink:hover{
+  color: #ffffff;
+  background: var(--color-primary-hover);
+  transform: scale(1.03);
+  box-shadow: var(--shadow-lg);
+}
+@media (max-width: 768px){
+  .cartPage {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "items"
+      "summary";
+    padding: var(--space-xl) var(--space-md);
+    gap: var(--space-lg);
+  }
+  .orderSummary{
+    position: static;
+  }
+}
