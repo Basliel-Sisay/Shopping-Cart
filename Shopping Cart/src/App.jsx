@@ -1,5 +1,10 @@
 import {Routes , Route} from 'react-router-dom';
 import { useState } from 'react';
+import Layout from './components/Navbar/Layout';
+import Home from './pages/Home/Home';
+import Shop from './pages/Shop/Shop';
+import Cart from './pages/Cart/Cart';
+
 function App(){
   const [cart, setCart] = useState([]);
   function addToCart(product, selectedQuantity){
@@ -56,3 +61,5 @@ function App(){
 </Routes>
   );
 }
+
+export default App;
