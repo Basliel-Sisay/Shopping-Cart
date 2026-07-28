@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "build": "cd \"Shopping Cart\" && npm install && npm run build"
+  },
   "dependencies": {
     "react-router-dom": "^7.18.1"
   },
