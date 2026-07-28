@@ -1,81 +1,63 @@
-.nav {
+.nav{
   position: sticky;
   top: 0;
   z-index: 100;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: var(--space-xl);
-  height: var(--nav-height);
-  padding: 0 var(--space-xl);
+  gap: 2rem;
+  height: 4rem;
+  padding: 0 2rem;
   background: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--color-border);
-  box-shadow: var(--shadow-sm);
+  border-bottom: 1px solid rgb(229, 231, 235);
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
 }
-
-.navLink {
+.navLink{
   position: relative;
-  font-size: var(--font-size-sm);
+  font-size: 0.875rem;
   font-weight: 500;
-  color: var(--color-text-secondary);
-  padding: var(--space-sm) var(--space-xs);
+  color: rgb(100, 116, 139);
+  padding: 0.5rem 0.75rem;
   text-decoration: none;
+  transition: all 0.2s ease-in-out;
 }
-
-.navLink::after {
+.navLink::after{
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   height: 2px;
-  background: var(--color-primary);
+  background: rgb(6, 18, 34);
   transform: scaleX(0);
   transform-origin: center;
   transition: transform 0.2s ease-in-out;
-  border-radius: var(--radius-full);
+  border-radius: 9999px;
+}
+.navLink:hover{
+  color: rgb(30, 41, 59);
 }
 
-.navLink:hover {
-  color: var(--color-text-primary);
-}
-
-.navLink:hover::after {
+.navLink:hover::after{
   transform: scaleX(1);
 }
-
-.cartLink {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-xs);
-  padding: var(--space-sm) var(--space-md);
-  background: var(--color-primary-light);
-  color: var(--color-primary);
-  border-radius: var(--radius-full);
+.active{
+  color: rgb(6, 18, 34);
   font-weight: 600;
-  text-decoration: none;
 }
-
-.cartLink:hover {
-  background: var(--color-primary);
-  color: #ffffff;
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-md);
+.active::after{
+  transform: scaleX(1);
 }
 
 @media (max-width: 768px) {
   .nav {
-    gap: var(--space-md);
-    padding: 0 var(--space-md);
+    gap: 1rem;
+    padding: 0 1rem;
   }
 
   .navLink {
-    font-size: var(--font-size-xs);
-  }
-
-  .cartLink {
-    padding: var(--space-xs) var(--space-sm);
+    font-size: 0.75rem;
   }
 }
