@@ -1,7 +1,6 @@
 [build]
-  base = "Shopping Cart"
-  command = "npm install && npm run build"
-  publish = "dist"
+  command = "cd \"Shopping Cart\" && npm install && npm run build"
+  publish = "Shopping Cart/dist"
 
 [[redirects]]
   from = "/*"
