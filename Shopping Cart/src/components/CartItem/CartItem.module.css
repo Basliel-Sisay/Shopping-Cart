@@ -1,4 +1,4 @@
-.cartItem {
+.cartItem{
   display: grid;
   grid-template-columns: auto 1fr auto;
   grid-template-rows: auto auto auto;
@@ -6,77 +6,69 @@
     "image title subtotal"
     "image price controls"
     "image . remove";
-  gap: var(--space-xs) var(--space-lg);
+  gap: 0.25rem 1.5rem;
   align-items: center;
-  padding: var(--space-lg);
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-sm);
-  transition: var(--transition);
+  padding: 1.5rem;
+  background: white;
+  border: 1px solid rgb(229, 231, 235);
+  border-radius: 1rem;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
+  transition: all 0.2s ease-in-out;
 }
-
-.cartItem:hover {
-  box-shadow: var(--shadow-md);
-  border-color: #d1d5db;
+.cartItem:hover{
+  box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.07),
+    0 2px 4px -2px rgba(15, 23, 42, 0.05);
+  border-color: rgb(209, 213, 219);
 }
-
-.image {
+.image{
   grid-area: image;
   width: 5rem;
   height: 5rem;
   object-fit: contain;
-  background: var(--color-bg);
-  border-radius: var(--radius-md);
-  padding: var(--space-sm);
-  border: 1px solid var(--color-border-subtle);
+  background: rgb(249, 250, 251);
+  border-radius: 0.625rem;
+  padding: 0.5rem;
+  border: 1px solid rgb(243, 244, 246);
 }
-
-.title {
+.title{
   grid-area: title;
-  font-size: var(--font-size-base);
+  font-size: 1rem;
   line-height: 1.4;
 }
-
-.price {
+.price{
   grid-area: price;
-  font-size: var(--font-size-sm);
+  font-size: 0.875rem;
   font-weight: 500;
-  color: var(--color-text-muted);
+  color: rgb(148, 163, 184);
 }
-
-.controls {
+.controls{
   grid-area: controls;
   justify-self: end;
 }
-
-.subtotal {
+.subtotal{
   grid-area: subtotal;
   justify-self: end;
-  font-size: var(--font-size-base);
+  font-size: 1rem;
   font-weight: 700;
-  color: var(--color-success);
+  color: rgb(16, 185, 129);
 }
-
-.removeButton {
+.removeButton{
   grid-area: remove;
   justify-self: end;
-  padding: var(--space-xs) var(--space-md);
-  font-size: var(--font-size-sm);
+  padding: 0.25rem 1rem;
+  font-size: 0.875rem;
   font-weight: 500;
-  color: var(--color-danger);
+  color: rgb(239, 68, 68);
   background: transparent;
   border: 1px solid transparent;
-  border-radius: var(--radius-md);
+  border-radius: 0.625rem;
 }
-
-.removeButton:hover {
-  background: var(--color-danger-light);
+.removeButton:hover{
+  background: rgb(254, 242, 242);
   border-color: rgba(239, 68, 68, 0.25);
-  color: #dc2626;
+  color: rgb(220, 38, 38);
 }
-
-@media (max-width: 768px) {
+@media (max-width: 768px){
   .cartItem {
     grid-template-columns: auto 1fr;
     grid-template-areas:
@@ -85,20 +77,17 @@
       "controls controls"
       "subtotal subtotal"
       "remove remove";
-    gap: var(--space-sm) var(--space-md);
+    gap: 0.5rem 1rem;
   }
-
-  .controls {
+  .controls{
     justify-self: start;
   }
-
-  .subtotal {
+  .subtotal{
     justify-self: start;
   }
-
-  .removeButton {
+  .removeButton{
     justify-self: stretch;
     text-align: center;
-    padding: var(--space-sm);
+    padding: 0.5rem;
   }
 }
