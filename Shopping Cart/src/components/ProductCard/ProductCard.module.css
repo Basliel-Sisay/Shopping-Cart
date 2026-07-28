@@ -1,33 +1,31 @@
-.productCard {
+.productCard{
   display: flex;
   flex-direction: column;
-  gap: var(--space-md);
-  padding: var(--space-lg);
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-sm);
-  transition: var(--transition);
+  gap: 1rem;
+  padding: 1.5rem;
+  background: white;
+  border: 1px solid rgb(229, 231, 235);
+  border-radius: 1rem;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
+  transition: all 0.2s ease-in-out;
 }
-
-.productCard:hover {
+.productCard:hover{
   transform: translateY(-4px);
-  box-shadow: var(--shadow-card-hover);
-  border-color: #d1d5db;
+  box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.08),
+    0 8px 10px -6px rgba(15, 23, 42, 0.04);
+  border-color: rgb(209, 213, 219);
 }
-
-.image {
+.image{
   width: 100%;
   aspect-ratio: 1;
   object-fit: contain;
-  background: var(--color-bg);
-  border-radius: var(--radius-md);
-  padding: var(--space-md);
-  border: 1px solid var(--color-border-subtle);
+  background: rgb(249, 250, 251);
+  border-radius: 0.625rem;
+  padding: 1rem;
+  border: 1px solid rgb(243, 244, 246);
 }
-
-.title {
-  font-size: var(--font-size-base);
+.title{
+  font-size: 1rem;
   font-weight: 600;
   line-height: 1.4;
   display: -webkit-box;
@@ -36,26 +34,24 @@
   overflow: hidden;
   min-height: 2.8em;
 }
-
-.price {
-  font-size: var(--font-size-xl);
+.price{
+  font-size: 1.25rem;
   font-weight: 700;
-  color: var(--color-text-primary);
+  color: rgb(30, 41, 59);
   letter-spacing: -0.01em;
 }
-
-.addButton {
+.addButton{
   width: 100%;
-  padding: var(--space-sm) var(--space-md);
+  padding: 0.5rem 1rem;
   margin-top: auto;
-  color: #ffffff;
-  background: var(--color-primary);
-  border-radius: var(--radius-md);
+  color: white;
+  background: rgb(18, 50, 73);
+  border-radius: 0.625rem;
   font-weight: 600;
 }
-
-.addButton:hover:not(:disabled) {
-  background: var(--color-primary-hover);
+.addButton:hover:not(:disabled){
+  background: rgb(10, 36, 56);
   transform: translateY(-1px);
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.07),
+    0 2px 4px -2px rgba(15, 23, 42, 0.05);
 }
